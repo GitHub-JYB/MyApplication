@@ -4,4 +4,11 @@
         <attr name="android:src" />
         <attr name="android:text"/>
     </declare-styleable>
+    
+    <declare-styleable name="SwitchButton">
+        <attr name="sb_bg_image" format="reference"/>
+        <attr name="sb_slide_image" format="reference"/>
+        <attr name="is_checked" format="boolean"/>
+    </declare-styleable>
+
 </resources>
