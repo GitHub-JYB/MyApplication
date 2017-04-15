@@ -1,6 +1,7 @@
 package com.example.admin_jyb.myapplication.Utils;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -20,6 +21,7 @@ public class ImageLoader {
     private Context context;
     private String url;
     private ImageView imageView;
+    private RequestListener<String, GlideDrawable> requestListener;
 
     public ImageLoader(Builder builder){
         this.context = builder.context;
@@ -28,6 +30,17 @@ public class ImageLoader {
     }
 
     public void showImage(){
+        requestListener = new RequestListener<String, GlideDrawable>() {
+            @Override
+            public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
+                return false;
+            }
+
+            @Override
+            public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                return false;
+            }
+        };
         Glide.with(context)
              .load(url)
              .diskCacheStrategy(DiskCacheStrategy.ALL)//缓存全尺寸又缓存其他尺寸
@@ -37,20 +50,12 @@ public class ImageLoader {
 //             .override(100,100)//改变大小
 //             .skipMemoryCache(true)//跳过图片缓存
 //             .priority(Priority.NORMAL)//设置下载优先级
-             .animate(R.anim.image_alpha)//动画
+//             .animate(R.anim.image_alpha)//动画
+//             .crossFade(3000)//淡入，时间3秒，默认300毫秒
+//             .dontAnimate()//没有淡入效果
 //             .thumbnail(0.1f)//先加载缩略图，再加载全图
-             .listener(new RequestListener<String, GlideDrawable>() {
-                 @Override
-                 public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
-                     return false;
-                 }
-
-                 @Override
-                 public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
-                     return false;
-                 }
-             }) //设置监听
-//             .transform(new CircleTransform(context))//转化为原型图片
+             .listener(requestListener) //设置监听
+//             .transform(new CircleTransform(context))//转化为原形图片
              .into(imageView);
     }
 
