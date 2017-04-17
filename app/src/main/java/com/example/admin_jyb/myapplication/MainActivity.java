@@ -18,7 +18,6 @@ public class MainActivity extends ToolBarActivity {
 
     private NotificationTarget notificationTarget;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
