@@ -1,8 +1,9 @@
-package com.example.admin_jyb.myapplication.Utils;
+package com.example.mvp.Utils;
 
 import android.widget.Toast;
 
-import com.example.admin_jyb.myapplication.Application.MyApplication;
+import com.example.mvp.Application.MyApplication;
+
 
 /**
  * Created by Admin-JYB on 2017/4/11.

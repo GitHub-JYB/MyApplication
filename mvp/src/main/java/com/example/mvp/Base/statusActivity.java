@@ -1,4 +1,4 @@
-package com.example.admin_jyb.myapplication.Base;
+package com.example.mvp.Base;
 
 import android.app.Activity;
 import android.os.Build;
@@ -8,7 +8,8 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
-import com.example.admin_jyb.myapplication.R;
+import com.example.mvp.R;
+
 
 /**
  * Created by Admin-JYB on 2017/4/11.

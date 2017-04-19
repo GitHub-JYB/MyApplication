@@ -1,16 +1,13 @@
-package com.example.admin_jyb.myapplication.Utils;
+package com.example.mvp.Image;
 
 import android.content.Context;
-import android.util.Log;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
-import com.example.admin_jyb.myapplication.R;
 
 /**
  * Created by Admin-JYB on 2017/4/14.
@@ -44,8 +41,8 @@ public class ImageLoader {
         Glide.with(context)
              .load(url)
              .diskCacheStrategy(DiskCacheStrategy.ALL)//缓存全尺寸又缓存其他尺寸
-             .error(R.drawable.switch_background)//错误图片
-             .placeholder(R.drawable.slide_button_background)//占位图片，照片为空时显示
+//             .error(R.drawable.switch_background)//错误图片
+//             .placeholder(R.drawable.slide_button_background)//占位图片，照片为空时显示
 //             .centerCrop()//填充方式
 //             .override(100,100)//改变大小
 //             .skipMemoryCache(true)//跳过图片缓存

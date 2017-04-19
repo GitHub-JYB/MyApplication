@@ -6,15 +6,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.admin_jyb.myapplication.R;
+import com.example.mvp.Base.statusActivity;
 
 import cn.sharesdk.framework.ShareSDK;
 import cn.sharesdk.onekeyshare.OnekeyShare;
+
 
 /**
  * Created by Admin-JYB on 2017/4/11.
  */
 
-public abstract class ToolBarActivity extends statusActivity{
+public abstract class ToolBarActivity extends statusActivity {
 
     private Toolbar mToolbar;
 

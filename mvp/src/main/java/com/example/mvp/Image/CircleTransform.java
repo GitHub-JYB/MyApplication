@@ -1,4 +1,4 @@
-package com.example.admin_jyb.myapplication.Utils;
+package com.example.mvp.Image;
 
 import android.content.Context;
 import android.graphics.Bitmap;

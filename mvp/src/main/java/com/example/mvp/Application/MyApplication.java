@@ -1,4 +1,4 @@
-package com.example.admin_jyb.myapplication.Application;
+package com.example.mvp.Application;
 
 import android.app.Application;
 
@@ -8,7 +8,7 @@ import android.app.Application;
 
 public class MyApplication extends Application {
 
-    protected static MyApplication instance;
+    private static MyApplication instance;
 
     @Override
     public void onCreate() {
